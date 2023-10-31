@@ -38,8 +38,4 @@
 
 ![Logo](https://github.com/sthossan/surbanajurong_2ndprob/blob/main/image/p3.png)
 
-Now you can see the application in your any local browser
-
-```
-
-```
+Now you can see the application in your any local browser Here is output ![Logo](https://github.com/sthossan/surbanajurong_2ndprob/blob/main/image/p4.png)
