@@ -20,17 +20,26 @@
 4. Go to inside TimeSeriesApi and open .sln file into visual studio
    After opening press F5 and it will be run into IIS
 5. Now go to timeSeriesWeb project then open it use Visula Studio Code
+```
 
 ![Logo](https://github.com/sthossan/surbanajurong_2ndprob/blob/main/image/p1.png)
+
+```
 6. npm install
+```
 
 ![Logo](https://github.com/sthossan/surbanajurong_2ndprob/blob/main/image/p2.png)
 
+```
 7. ng serve
    or
    ng serve --port 42001 --open
+```
 
 ![Logo](https://github.com/sthossan/surbanajurong_2ndprob/blob/main/image/p3.png)
 
 Now you can see the application in your any local browser
+
+```
+
 ```
