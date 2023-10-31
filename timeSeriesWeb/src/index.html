@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Time Series</title>
+    <base href="/" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet" />
+
+    <link href="assets/css/light.css" rel="stylesheet">
+
+
+</head>
+<!--
+  HOW TO USE: 
+  data-theme: default (default), dark, light, colored
+  data-layout: fluid (default), boxed
+  data-sidebar-position: left (default), right
+  data-sidebar-layout: default (default), compact
+-->
+
+<body data-theme="colored" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+    <app-root></app-root>
+    <script type="text/javascript">
+        function sidebarToggle() {
+            let element = document.getElementById("sidebar");//.addEventListener("click", sidebarToggle);
+            //let element = document.getElementsByClassName("sidebar js-sidebar");
+
+            if (element.classList.contains('collapsed'))
+                setTimeout(() => { element.classList.remove("collapsed"); }, 10);
+            else
+                setTimeout(() => { element.classList.add("collapsed"); }, 10);
+        } 
+    </script>
+</body>
+
+</html>

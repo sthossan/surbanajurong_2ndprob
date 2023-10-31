@@ -1,0 +1,70 @@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3><strong>Dashboard (ORM)</strong></h3>
+    </div>
+</div>
+
+<div class="col-12 mb-md-2">
+    <div class="row">
+        <div class="col-12 col-md-11">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="form-label">Building</label>
+                    <select class="form-select" [(ngModel)]="selectedBuilding">
+                        <option [ngValue]="item['id']" *ngFor="let item of buildingList">
+                            {{item['buildingName']}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Object</label>
+                    <select class="form-select" [(ngModel)]="selectedObject">
+                        <option [ngValue]="item['id']" *ngFor="let item of objectList">
+                            {{item['tsName']}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">DataField</label>
+                    <select class="form-select" [(ngModel)]="selectedDataField">
+                        <option [ngValue]="item['id']" *ngFor="let item of dataFieldList">
+                            {{item['dataFieldName']}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Daterange</label>
+                    <!-- <input class="form-control" [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10" [selectMode]="'range'">
+                    <owl-date-time #dt10></owl-date-time> -->
+
+                    <div class="input-group">
+                        <input autocomplete="off" class="form-control" [(ngModel)]="selectDate" placeholder="yyyy-mm-dd" name="dp" [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10" [selectMode]="'range'" />
+                        <button class="input-group-text" [owlDateTimeTrigger]="dt10" type="button">
+                            <i data-feather="calendar"></i>
+                        </button>
+                        <owl-date-time #dt10 [firstDayOfWeek]="0" pickerMode="dialog" [showSecondsTimer]="true" (afterPickerClosed)="limitDaysRangeSelection()"></owl-date-time>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-1">
+            <div class="pt-md-4">
+                <button class="btn btn-primary col-12" (click)="search()">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-12 col-xxl-12">
+    <div class="row">
+        <div class="col-sm-12 col-xl-12">
+            <div class="card flex-fill w-100">
+                <div class="card-body pt-2 pb-3">
+                    <div class="chart chart-sm">
+                        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" [(update)]="updateFlag" [callbackFunction]="chartCallback" style="width: 100%; height: 100%; display: block;"></highcharts-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

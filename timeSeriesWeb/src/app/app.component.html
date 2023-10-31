@@ -1,0 +1,77 @@
+<block-ui>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar" data-simplebar="init">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                <div class="simplebar-content" style="padding: 0px;">
+                                    <a class="sidebar-brand" [routerLink]="['/', 'dashboard']">
+                                        <span class="sidebar-brand-text align-middle">
+                                            Time Series
+                                            <sup><small class="badge bg-primary text-uppercase"></small></sup>
+                                        </span>
+                                        <svg class="sidebar-brand-icon align-middle" width="32px" height="32px" viewbox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" color="#FFFFFF"
+                                            style="margin-left: -3px">
+                                            <path d="M12 4L20 8.00004L12 12L4 8.00004L12 4Z"></path>
+                                            <path d="M20 12L12 16L4 12"></path>
+                                            <path d="M20 16L12 20L4 16"></path>
+                                        </svg>
+                                    </a>
+                                    <ul class="sidebar-nav">
+                                        <li class="sidebar-item active" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                                            <a class="sidebar-link" [routerLink]="['/', 'dashboard']">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-credit-card align-middle">
+                                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                                </svg> <span class="align-middle">Dashboard (ORM)</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" [routerLink]="['dashboardsp']">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-credit-card align-middle">
+                                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                                </svg> <span class="align-middle">Dashboard (SP)</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 1334px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                    <div class="simplebar-scrollbar" style="height: 25px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <nav id="test" class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle" onclick="sidebarToggle()">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+            </nav>
+            <main class="pt-2" style="flex: 1;">
+                <div class="container-fluid">
+                    <router-outlet></router-outlet>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</block-ui>
